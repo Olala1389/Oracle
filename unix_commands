@@ -1,0 +1,63 @@
+mkdir -p xx/yy/zz - creates all these three directories
+rmdir - removes empty directories
+ls -l - shows the permissions of the file and the total size of the displayed files. 
+ls -a - lists all including hidden files
+ls -F - places a forward slash (/) after each filename if that file is a directory and and asterisk (*) if it is a text file.
+ls -FG - marks by colors and adds / and *.
+ls -s - shows size of each file in blocks.
+ls -C - lists all files in column format.
+ls -m separates the list by commas
+rm -i - asks for confirmation before deleting any file in a directory. It's usefull if we do not want to delete all files but only some. 
+rm -r * - removes all there is under our HOME directory. 
+control l - clear
+open -a Preview Name - opens file NAME by using Preview program
+* - for all similar objects
+finger USER NAME - displays when the user was in the system the last time
+echo $0 - shows the current shell
+tree -L 2 - displays the tree with only 2 levels down
+ctrl b $ - rename the current session in tmux
+ctrl b c - create a new window in the current session
+exit - exit the current window
+ctrl b n -switch between windows in tmux
+ctrl b number of the window
+ctrl b P - switches to the previous window
+ls -l - displays permissions of files and directories
+chmod mode file - modifies/sets permissions of files
+mkdir -m 777 NAME - when creating a directory we can immidiately set its permission (in this example - mode 777)
+777 = (400 + 200 + 100) + (40 + 20 + 10) + (4 + 2 + 1) - means drwx -rwx-rwx
+:e - when in vim text file - i can switch to another text file
+:r - adding text from a different file to the file where i am working now
+:f - when in vim, shows file name
+Learned commands:
+cat |less
+cat .bash.profile
+vim .bash.profile
+ls -a
+vim .NAME
+vim NAME
+ls
+gg
+G
+o
+pwd
+cd
+cd /
+alias this='stands for this'
+w3m - it's a browser
+history - displays history of commands
+mkdir NAME
+top
+cd NAME/NAME/NAME
+cd ../.. - relocated me 2 levels up
+mv - move a file
+rm NAME - remove a text file
+rm -R - remove a folder
+git - распределенная система управления версиями
+tmux att
+ctrl b d - detach tmux
+ctrl b shift % - vertical split
+ctrl b shit ' - horizontal split
+ctrl b o - move between windows
+ctrl b $ - name the session
+tmux kill-session
+whereis NAME

@@ -1,0 +1,141 @@
+. -  Repeat the last change
+R - replaces the characters starting from the cursor position.
+/UNIX - will search for the word UNIX in the text forward
+?UNIX - will search for the word UNIX in the text bachward 
+n - next
+I - places the text you enter at the beginning of the curren line. 
+A - places the text you enter after the last character of the current line. 
+o - opens a blank line below the current line and places the cursor at the beginning of the new line. 
+O - o - opens a blank line above the current line and places the cursor at the beginning of the new line. 
+x - deletes the character specified by the cursor position
+3dd - will delete 3 lines including the current line and the forward ones. 
+vim -R myfile - opens the file as a read only file
+view myfile - opens the file as a read only file
+vi -c/most myfile - opens myfile and places the cursor on the line with first occurrene of the word most.
+vim file1 file2 - creates and opens two files
+:ar - displays file names in vim
+:n - we can edit the first and then by :n proceed to editing the second file
+:1,2 w temp - the first two lines are saved in temporary vim file
+:e myfile - we switch to the file 'myfile'
+
+dd - deletes the current line
+:r -editing text from a different file to the file where i am working now
+
+:f - when in vim, shows file name.
+gg - takes to the beginning of the text
+G - to the end
+ctrl g - displays the number of the line where the cursor is
+2G - moves the cursor to the 2nd line
+yy - copy
+p - paste
+P - paster in the line above
+"2p - vim copies the contents of buffer 2 to the right of the cursor
+"wdd - deletes the current line and saves a copy of it in buffer w
+"wp - copies the contents of buffer w to the location indicated by the cursor position.
+"z7yy - copies7 lines into buffer z
+"zp - copies buffer z to the location indicated by the cursor
+:set all - allows to customize vim commands
+:set number - starts numbering lines
+:set nonumber - stops numbering lines
+:set report=0 - sets reporting on every change in the file
+:set wrapmargin=10 - causes the vi editor to break the text when it reaches a specified number of characters from the right margin
+:set wrapmargin=0 - turns wrapmargin off
+:ab - to see the list of
+abbreviations set
+:ab uno UNIX Operating System - uno is abbreviation assigned to UNIX Operating System 
+:map - displays the list of map key assignments
+:map q 5dd - when in command mode, vi deletes file lines of text each time you press q
+.exrc - we can creat this file in the working directory with all the options set op so tha every time vi editor will when opening a text file will automatically check for the existence of the .exrc file in your working directory and set up the edit environment accordingly.
+
+
+
+
+
+
+
+
+~                                                                                                                                                                            
+
+
+
+
+
+
+
+
+st login: Sun Feb  4 02:05:36 on ttys000
+~ $ tmux att
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dd - deletes the entire line
+u - undo the last change
+. - Repeat the last change
+R - replaces the characters starting from the cursor position.
+/UNIX - will search for the word UNIX in the text forward
+?UNIX - will search for the word UNIX in the text bachward
+n - next
+I - places the text you enter at the beginning of the curren line. 
+A - places the text you enter after the last character of the current line. 
+o - opens a blank line below the current line and places the cursor at the beginning of the new line. 
+O - o - opens a blank line above the current line and places the cursor at the beginning of the new line.
+x - deletes the character specified by the cursor position
+4dd - will delete 3 lines including the current line and the forward ones. 
+
+
+
+
+
+
+
+
+
+
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                            
+~                                                                                                                                                                       
+[0] 0:vim*                                                                                                                              "Olgas-MacBook.local" 15:02 05-Feb-18
+

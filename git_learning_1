@@ -1,0 +1,74 @@
+git --versio
+git config --global user.name 'Olga Makarova'
+git config --global user.email 'olga.alex.makar@gmail.com'
+git config --list - gives us all configuration values
+
+There are two scenarios in using git
+____________________________________
+1 scenario - we have an existing local project which we want to start tracking. 
+
+Go to the needed local directory
+
+git init
+git status - shows that we have untrached files
+
+git add file1 / git add -A (if we want to add all untracked files)
+git commit -m 'comment'
+git reset - remove some files from the stagint area
+git log - to see commits
+_____________________________________
+2 scenario - we want to track an existing remote repository with git
+
+git clone <url> <where to clone the repository> - we can indicate . as the place where to clone. When cloning, there must be no git initialized in the local directory. It must be completely new and empty
+
+git remote -v
+git branch -a
+git diff - after we modify the files or add any new files we can run command 'git diff' to see the changes we made since the moment we clones the remote repository.
+
+git add -A - we need to stage our changes
+git commit -m 'comment' - we need to add our changes to commits in the local repository.
+
+git pull - every time we want to push our commits we need to git pull, because other users may have already saved some changes while we were working on our files. 
+
+git pull origin master - we do not indicate the name of the repository, because we cloned from it and the system considers it as origin 
+
+git push origin master - to push our local changes to the remote repository. Again, we do not need to write the name o the repository, because it is 'origin' for us anyway. 
+______________________________________
+Our default branch is always called a 'master' branch.
+
+We can creat a sub-branch, which will be a working branch for us.
+
+git branch sub-branch - we created a branch named 'sub-branch'
+
+git checkout sub-branch - we cd to that newly created branch
+
+git checkout master - we cd to the master branch
+
+git branch - desplays the ls of branches and the * current branch.
+
+git add -A - we stage all changes we make in any files in sub-branch
+git commit -m 'comment' - we commit these changes
+
+git push -u origin sub-branch - we push our changes and create a sub-branch in remote repository.
+
+git checkout master
+
+git merge sub-branch - we merge our branhes locally
+
+git branch -d NAME OF BRANCH - deletes the branch
+
+git branch -a  - displays all branches including remote ones 
+
+git push origin --delete NAME OF THE BRACH - deletes the remote branch we have already deleted locally.
+________________________________________
+We can track our local repository and store it in remote.
+git init - in the local folder, the folder may or may not contain already created local files for tracking
+git remote add REMOTE REPO NAME url
+git remote -v - shows what branches exist locally and remotely
+git push -u REPOSITORY NAME branch
+
+___________________________________________
+
+
+
+
