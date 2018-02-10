@@ -1,3 +1,4 @@
+
 . -  Repeat the last change
 R - replaces the characters starting from the cursor position.
 /UNIX - will search for the word UNIX in the text forward
@@ -45,48 +46,14 @@ abbreviations set
 :ab uno UNIX Operating System - uno is abbreviation assigned to UNIX Operating System 
 :map - displays the list of map key assignments
 :map q 5dd - when in command mode, vi deletes file lines of text each time you press q
-.exrc - we can creat this file in the working directory with all the options set op so tha every time vi editor will when opening a text file will automatically check for the existence of the .exrc file in your working directory and set up the edit environment accordingly.
-
-
-
-
-
-
-
-
-~                                                                                                                                                                            
-
-
-
-
-
-
-
-
-st login: Sun Feb  4 02:05:36 on ttys000
-~ $ tmux att
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.exrc - we can creat this file in the working directory with all the options set op so tha every time vi editor will when opening a text file will automatically check for the existence of the .exrc file in your working directory and set up the edit environment accordingly. If it doesn't fine the .exrc file in the working directory then it will look for it in the HOME directory.
+:! - signals vim that the next command is UNITX shell command
+:!date - displays date
+:r ! date - reads the results of the date command and places it after the cursor position.
+:! ls - lists the files in the current directory
+:! who - shows who is on the system
+:! pwd - lists the contents of the working directory
+J - adds two lines together.
 dd - deletes the entire line
 u - undo the last change
 . - Repeat the last change
@@ -100,42 +67,3 @@ o - opens a blank line below the current line and places the cursor at the begin
 O - o - opens a blank line above the current line and places the cursor at the beginning of the new line.
 x - deletes the character specified by the cursor position
 4dd - will delete 3 lines including the current line and the forward ones. 
-
-
-
-
-
-
-
-
-
-
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                            
-~                                                                                                                                                                       
-[0] 0:vim*                                                                                                                              "Olgas-MacBook.local" 15:02 05-Feb-18
-
