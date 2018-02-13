@@ -1,0 +1,18 @@
+Compiled program to study QA. 
+
+1. Learn the basics of JAVA(any programming language) - Door step to Selenium2 automation.
+Important Java concepts with respect to Selenium :
+
+    Condition statement and looping statement
+    Exception Handling
+    Methods of String class
+    List and Set
+    Upcasting and Runtime Polymorphism    
+
+2. Basic understanding of HTML, CSS
+3. Learn about locators, simple selenium commands and try to automate simple functionality.
+4. Learn how to control the browser and go on using the frameworks like TestNG(preferrable) or JUnit
+5. Learn Javascript, which will help me in many ways, with Selenium it is more powerful
+
+6. The go on with the advanced usage of selenium to automate complex functions.
+
