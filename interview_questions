@@ -1,2 +1,131 @@
-1. Selenium questions https://www.edureka.co/blog/interview-questions/selenium-interview-questions-answers/ 
+What is software testing?
+
+According to ANSI/IEEE 1059 Standard software testing is a process of analysing
+a software item to detect the differences between existing and required
+conditions (i.e. defects) and to evaluate the features of the software item. 
+
+Software testing is a process of evaluating functionality of a software
+application with the intent to find whether the developed software met the
+specified requirements or not and to identify the defects to ensure that the
+product is defect free in order to produce the quality product. 
+
+Software testing types: manual testing and automatic testing.
+
+Manual testing: Manual testing is the process of testing the software manually
+to find the defects. Tester should have the perspective of an end users and to
+ensure all the features are working as mentioned in the requirement document.
+In this process, testers execute the test cases and generate the reports
+manually without using any automation tools.
+
+Automatic testing: Automation testing is the process of testing the software
+using an automation tools to find the defects. In this process, testers execute
+the test scripts and generate the test results automatically by using
+automation tools. Some of the famous automation testing tools for functional
+testing are QTP/UFT and Selenium.
+
+
+Testing methods: 
+1. Static testing.
+2. Dynamic testing.
+
+
+
+Testing approaches
+
+- black box testing
+- white box testing
+- grey box testing
+
+What is white box testing?
+
+White box testing is the testing of a software internal coding solutions and
+infrustructure. It fosuses primarily on strengthening security, the flow of
+inputs and outputs through the application and improving design and
+usability. WBT is also known as "clear, open, structural and glass box
+testing". It is one of two parts of box testing approach of software testing.
+It's counterpart - black box testing, involves testing from an external or end
+user type perspective. On the other hand, WBT, is based on the inner workings
+of the application and revolves around internal testing. The term "white box"
+was used because of the "see-through-box" concept. The whitebox name symbolizes
+the ability to see through the software's out shell (or "box") into it's inner
+workings. Likewise, the "blackbox" in "black box testint" symbolizes no being
+able to see the inner workings of the software so that only the end-user
+experience can be tested.
+
+What do you verify in white box testing?
+
+WBT invoves the testing of the software code for the following:
+- internal security holes;
+- broken or powerly structured paths in the coding process;
+- the flow of specific inputs through the code;
+- expected output;
+- the functionality of conditional loops;
+- testing of each object, statement, and function on an individual basis.
+WBT involves checking a series of predefined inputs against expected or desired
+outputs so that when a specific input does not result in the expected output
+you have encounted a bug. 
+
+How do you perform a WBT?
+
+WBT is broken into two basic steps: 
+Step 1: learn and understand the source code of the application.
+Step 2: create test cases and execute.
+
+Code coverage analysis
+
+It identifies areas of a program that are not exercised by a set of test cases.
+Once gaps are identified, you create test cases to verify untested parts of
+code. 
+ 
+Code coverage techniques
+
+Statement coverage and Branch coverage techniques generall cover about 90% of
+code.
+Besides, there are numerous coverage types such as condition coverage, multiple
+condition coverage, path coverage, function coverage, etc.
+
+What is black box testing?
+
+In BBT the functionality of the software under test (SUT) is checked without
+looking at the internal code structure, implementation details or knowledge of
+internal paths of the software.
+
+Types of black box testing
+
+- functional testing. This BBT is related to functional requirements of a
+  system. It is done by software testers.
+- non-functional testing. This type of BBT is not related to testing of a
+  specific functionality, but non-functional requirements, such as performance,
+  scalability, usability.
+- regression testing. It is done after code fixes, upgrades or any other system
+  maintenance to check the new code has not affected the existing code. 
+
+Black Box Testing steps
+
+- Initially requirements and specifications of the system are examined. 
+- Tester chooses valid inputs (positice test scenario) to check whether
+  application under test processes them correctly. 
+  Also some invalid inputs (negative test scenario) are chosen to verify that
+  the application or system under test is able to detect them. 
+- Testers determine expected outputs for all inputs. 
+- Software testers create test cases with selected inputs. 
+- Test cases are executed.
+- Software tester compares the actual outputs with the expected outputs. 
+- If there are any defects they are fixed and re-tested. 
+
+Tools for Black Box Testing
+- for functional testing you can use QTP or Selenium
+- for non-functional tests you can use Loadrunner
+
+Possible test case columns: 
+Test Scenario - f.ex. Check Login Functionality" 
+Test Case - "check response on entering Agent name and password"
+Test Steps - 1) Launch Application 2) Enter Agent Name 3) Enter Password
+4)Click OK button.
+Test Data - "Agent Name: guru99  Password: Mercury"
+Expected Result - "Login must be successful"
+Actual results - 'Login successful'
+Pass/Fail - 'Pass'
+
+
 

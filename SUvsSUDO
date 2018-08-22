@@ -1,0 +1,16 @@
+org://www.rootusers.com/the-difference-between-su-and-sudo-commands-in-linux/
+
+A major key difference is who gets the root password. If a user wishes to su to
+root then they require the password of the root account. If instead the user is
+executing a command with sudo, they only need their own password and sudo
+privileges. Therefore if you have multiple users that require root privileges
+on a system, providing sudo access is considered to be more secure as we can
+audit commands that have been executed by specific users without sharing the
+root user’s password with other people.
+
+By default a non root user could use sudo privileges to change the root
+password, however the /etc/sudoers file can be used to only grant root access
+to specific commands that the user needs to run as root rather than being able
+to run anything as root. With sudo we can define security policy, allowing one
+group of users to perform only a specific subset of clearly defined commands as
+the root user.

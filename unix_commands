@@ -25,7 +25,7 @@ ctrl b P - switches to the previous window
 ls -l - displays permissions of files and directories
 chmod mode file - modifies/sets permissions of files
 mkdir -m 777 NAME - when creating a directory we can immidiately set its permission (in this example - mode 777)
-777 = (400 + 200 + 100) + (40 + 20 + 10) + (4 + 2 + 1) - means drwx -rwx-rwx
+777 = (400 + 200 + 100) + (40 + 20 + 10) + (4 + 2 + 1) - means owner drwx+grouprwx+others rwx
 :e - when in vim text file - i can switch to another text file
 :r - adding text from a different file to the file where i am working now
 :f - when in vim, shows file name
@@ -103,3 +103,63 @@ md5 <name of the iso file> - does the same thing
 cksum - generates and hashsum for the entered text of file
 cksum <enter> <text> <ctrl+d> - displays the hashsum of the entered text
 CLI - command line interface
+script <file name> - will record everything from the terminal screen to the
+file. It's like a printscreen of your session.
+
+
+.profile - to add shell variables for permanent use.
+PS1="Here: "  - if tired of $prompt, you can change it by using Prompt String 1
+(PS1) variable
+
+export - to see what variables are already set
+
+VISUAL=vi - the VISUAL variable is used with command editing. If it is set to
+vi then shall gives you vi-style editing capabilities on your command line.
+This is only in ksh command line editor. 
+
+set -o vi - also turns on the command line editing opetion.
+nmcli d - to see the existing interfaces' status (active/unmanaged)
+nmcli connection show
+nmcli connection up id enp0s3 - to activate the enp0s3 connection
+
+sudo service nginx status - to make sure a certain package is installed and active
+rsync -av . olga@192.168.56.5:~/Pictures - this command line adds all files in
+the present directory to the remote computer folder Pictures.
+
+
+Для протоколирования образов компьютерной среды использовать virtualenv
+1) create Environments folder
+2) in Environments folder type 
+virtualenv project1_env - to create the file containing environment data
+3) when you need to activate the scripted environment just type 
+source project1_env/bin/activate
+Then we will see that we are in (project1_env environment.
+To see the list of packages in the environment type: pip list
+
+Next step is to freeze all the local dependencies in a single file:
+pip freeze --local > requirements.txt
+To get out of the virtual environment type in: deactivate
+If we create one more environment we can create it with more specific features, f.ex.
+virtualenv -p /usr/bin/python2.6 project2_env
+
+next step: pip project2_env/bin/activate
+next step: pip list
+
+we can use the dependencies from the previous environment in the new one. To do so, we should: 
+pip install -r requirements.txt
+
+to check the available packages now:
+pip list
+
+next: deactivate
+
+getent group - to view all groups on your system
+
+usermod -a -G group1, group2, group3 exampleusername - adding user to groups
+
+groups olga - will show what groups user olga belongs to
+
+sudo groupaddd mynewgroup - to add a new group
+
+:w
+[A

@@ -1,0 +1,11 @@
+To import existing source code that doesn't have an eclipse project file follow the
+following easy steps:
+- Step 1:- Open Eclipse. 
+Step 2:- Create a new Empty Java Project into the Workspace. 
+Step 3:- Select General and then Project. 
+Step 4:-Write the project Name. 
+Step 5:- Now right click on the source folder and choose import and then general and file system. 
+Step 6:- Choose your files or browse your file from the system. 
+Step 7:- Now open .java file & edit (or run).
+Follow these simple steps to import an existing Java project in eclipse. Enjoy
+running your projects.

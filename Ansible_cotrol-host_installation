@@ -1,0 +1,61 @@
+enstallation of Ansible Automation Engine on a Control (Server) Vertual Machine and Linking it to a Host
+Vertual Machine via ssh protocol (or any other)
+
+1. Creat two (or any number you need) vertual machines
+2. On the Control (Server) Machine: 
+    a) check for yum updates (yum update -y)
+    b) Ansible package is not available in the default yum repositories, so we
+    need to set up the epel (Extra Packages for Enterprise Linux) repository,
+    it's open source and free community based repository from Fedora team. 
+    command: rpm http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+    c) yum install ansible
+    d) ansible --version
+    e) generate a public ssh key: ssh-keygen
+    f) copy the generated key onto the host machine: ssh-copy-id -i root@IP
+    address of the host machine
+
+3. On the host machine:
+    a) N.B.: if there is no internet connection try command: dhclient
+    b) to find the IP address: ifconfig
+
+4. Write Host Inventory on the Server Machine
+The default location of the Host Inventory File is at /etc/ansible/hosts
+
+    a) vim /etc/ansible/hosts
+    b) Now We want to add the IP address of the new host machine into the Inventory List.
+    we 1)write the name of the group (if we are planning to have
+    many host machines of a certan type) and 2) IP address under it.
+
+    [test-servers]
+    192.13.14 (it's just an example of an IP address)
+    
+5. Now test the ssh connection: ansible -m ping 'test-servers'
+6. Write the playbook.
+    a) vi nginx.yml (it is a file in Yaml language) 
+    N.B.: YAML (YAML Ain't Markup Language) is a human-readable data 
+    serialization language. It is commonly used for configuration files,
+    but could be used in many applications where data is being stored (e.g. 
+    debugging output) or transmitted (e.g. document headers).
+    b) every YAML file starts with three dashes: ---
+    ---
+    - hosts : test-servers
+
+      tasks : 
+      - name : install nginx
+        yum  : pkg=nginx state=installed
+
+        notify: 
+         - start nginx
+     
+     handlers : 
+     - name : start nginx
+       service : name=nginx state=started
+
+       :wq
+7. Run the playbook in the command line: ansible-playbook nginx.yml
+8. Go to the host machine and check if nginx was successfully installed 
+---   on the host machine: ps waux | grep nginx
+9. DONE.
+10. sudo service nginx status - on host_2 to make sure ansible is running on
+this machine after the remote installation
+

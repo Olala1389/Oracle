@@ -67,3 +67,10 @@ o - opens a blank line below the current line and places the cursor at the begin
 O - o - opens a blank line above the current line and places the cursor at the beginning of the new line.
 x - deletes the character specified by the cursor position
 4dd - will delete 3 lines including the current line and the forward ones. 
+How to copy from one file to another:
+1) Edit the first file, yanking the text you want. Then open your second file
+from within vi ( :e /path/to/other/file ) and paste it
+2) Open both files together in a split window and navigate between them using
+Ctrl + w, UP/Down either by:  
+a) vi -o /path/to/file1 /path/to/file2
+b) from within the first file, Ctrl + w, s

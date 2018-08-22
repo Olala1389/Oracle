@@ -1,0 +1,8 @@
+if 'nmcli d' shows devices unmanaged:
+
+1) /etc/NetworkManager/NetworkManager.conf file should show [ifupdown]
+managed=true
+2) restart the network-manager service by 'sudo service network-manager
+restart' or 'sudo systemctl restart NetworkManager'
+---------------------------------
+

@@ -1,0 +1,67 @@
+ansible 192.168.56.4 -i hosts -m copy -a 'src=/etc/hosts dest=/tmp/
+ansible all -b -m group -a 'name=admin state=present'
+ansible all -b -m user -a 'name=admin group=admin createhome=yes
+generate_ssh_key=yes password=....'
+
+ansible host_name -m user -a 'name=user_name state=absent remove=yes'
+_________________________
+ansible all -m package -a 'name=git state=present'
+If you need to check a file’s permissions, MD5, or owner, use Ansible’s stat
+module:
+nt to copy hundreds of files, especially in very deeply-nested directory
+structures, you should consider either copying then expanding an archive of the
+files with Ansible’s unarchive module, or using Ansible’s synchronize or rsync
+modules.
+_________________________
+
+ansible host2 -b -m fetch -a 'src=/home/olga/Playbooks/testcopy dest=./
+flat=yes'
+
+we add flat=yes if we want the file to be fetched directly to the local
+directory, otherwise it will be copied to /local
+directory/host2/home/olga/Playbooks/testcopy, in other words, new directories
+will be created in the local directory to reflect the same directories as in
+the destination path
+
+_________________________
+
+ansible all -m file -a 'dest=/tmp/test mode=644 state=directory'
+
+__________________________
+
+To make sure the date and time on each server is in sync: 
+
+ansible all -a 'date'
+
+ansible all -a 'service ntpd stop'
+
+ansible all -a 'ntpdate -q 0.rhel.pool.ntp.org'
+ansible all -a 'service ntpd start'
+---------------------------
+
+To create a symlink
+
+ansible host1 -m file -a 'src=/path/filename dest=path/symlink owner=olga
+state=link force=yes'
+---------------------------
+
+If you redirect and filter output from a command run via Ansible, you need to
+use the shell module instead of Ansible’s default command module
+
+Ansible multi -b -m shell -a "tail /var/ log/ messages |  grep ansible-command
+| wc -l"
+___________________________
+
+Ansible makes managing cron jobs easy with its cron module. If you want to run a
+shell script on all the servers every day at 4 a.m., add the cron job with:
+
+ansible multi -b -m cron -a "name =' daily-cron-all-servers' hour = 4 job ='/
+path/ to/ daily-script.sh'"
+
+___________________________
+
+ansible-doc modulename - to know more details about a specific module such as
+parameter names and how to use the module
+
+ansible-doc -s modulename - to get playbook example on how to use a module 
+_________________________
