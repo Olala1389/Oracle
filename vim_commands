@@ -25,6 +25,7 @@ dd - deletes the current line
 :f - when in vim, shows file name.
 gg - takes to the beginning of the text
 G - to the end
+
 ctrl g - displays the number of the line where the cursor is
 2G - moves the cursor to the 2nd line
 yy - copy
@@ -74,3 +75,7 @@ from within vi ( :e /path/to/other/file ) and paste it
 Ctrl + w, UP/Down either by:  
 a) vi -o /path/to/file1 /path/to/file2
 b) from within the first file, Ctrl + w, s
+
+
+:%s/what i want to be replaced/what i will replace it with - it will replace all instances in the entire text
+
